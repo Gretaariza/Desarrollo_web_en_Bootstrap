@@ -1,16 +1,14 @@
-/* Global Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden; /* Prevenir scroll horizontal */
+  overflow-x: hidden;
   width: 100%;
 }
 
-/* Hero Section */
 .bg-hero {
   position: relative;
   background: url('./imagenes/fondo-granos.jpeg') center/cover no-repeat;
-  background-attachment: fixed; /* fondo estático */
+  background-attachment: fixed;
   color: #fff;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
   min-height: 100vh;
@@ -25,7 +23,6 @@ body {
   right: 0;
 }
 
-/* Overlay oscuro para resaltar el texto */
 .bg-hero::before {
   content: "";
   position: absolute;
@@ -40,20 +37,19 @@ body {
   z-index: 2;
 }
 
-/* Texto siempre arriba del overlay */
 .bg-hero .container {
   position: relative;
   z-index: 2;
 }
 
 
-/* Section Headers */
+/* Header */
 .section-title {
   font-weight: bold;
   color: #3e2723;
 }
 
-/* Special Offer Section */
+/* Pomo */
 .special-offer {
   background-color: #f8f9fa;
 }
@@ -62,7 +58,7 @@ body {
   color: #d4a373 !important;
 }
 
-/* Coffee Cards */
+/* Cafes */
 .coffee-card {
   transition: all 0.3s ease;
   overflow: hidden;
@@ -99,7 +95,7 @@ body {
   border: 1px solid #dee2e6;
 }
 
-/* Gallery Section */
+/* Galeria */
 .gallery-img {
   height: 300px;
   object-fit: cover;
@@ -111,7 +107,7 @@ body {
   transform: scale(1.02);
 }
 
-/* Testimonials Section */
+/* Clientes */
 .testimonial-rating {
   font-size: 1.2rem;
   letter-spacing: 2px;
@@ -127,7 +123,7 @@ body {
   color: #3e2723;
 }
 
-/* Menu Section */
+/* Menu */
 .menu-list {
   max-width: 800px;
   margin: 0 auto;
@@ -144,7 +140,7 @@ body {
   background-color: #f8f9fa;
 }
 
-/* Contact Form Section */
+/* Formulario */
 .contact-section {
   background-color: #f8f9fa;
 }
@@ -199,7 +195,7 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Site Footer */
+/* Footer */
 .site-footer {
   font-size: 0.9rem;
 }
