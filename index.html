@@ -3,67 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Café Minimalista</title>
-  <!-- Bootstrap CSS -->
+  <title>Le Petit Café</title>
+  <link rel="icon" href="./imagenes/cafe-icono1.jpg.png" type="image/png">
+ 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+  <!-- Barra de nav -->
+  <header class="site-header">
+    <nav class="main-navigation navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#inicio">Café Minimalista</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <a class="cafe-brand navbar-brand fw-bold" href="#home-section">Le Petit Café</a>
+        <button class="mobile-menu-toggle navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#cafes">Nuestros Cafés</a></li>
-            <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
-            <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+        <div class="collapse navbar-collapse" id="primaryNavigation">
+          <ul class="main-menu navbar-nav ms-auto">
+            <li class="menu-item nav-item"><a class="menu-link nav-link" href="#home-section">Inicio</a></li>
+            <li class="menu-item nav-item"><a class="menu-link nav-link" href="#coffee-section">Nuestros Cafés</a></li>
+            <li class="menu-item nav-item"><a class="menu-link nav-link" href="#menu-section">Menú</a></li>
+            <li class="menu-item nav-item"><a class="menu-link nav-link" href="#location-section">Ubicación</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section id="inicio" class="vh-100 d-flex align-items-center justify-content-center text-center bg-hero">
+  <!-- Inicio -->
+<section id="home-section" class="bg-hero">
+  <div class="hero-content container">
+    <h1 class="hero-title display-4 fw-bold">Bienvenido a Le Petit Café</h1>
+    <p class="hero-description lead">Un espacio donde el aroma y la elegancia se encuentran</p>
+    <a href="#coffee-section" class="hero-cta btn btn-dark btn-lg mt-3">Descubrir</a>
+  </div>
+</section>
+
+  <!-- Promo -->
+  <section class="special-offer py-5 bg-light">
     <div class="container">
-      <h1 class="display-4 fw-bold">Bienvenido a Café Minimalista</h1>
-      <p class="lead">Un espacio donde el aroma y la elegancia se encuentran</p>
-      <a href="#cafes" class="btn btn-dark btn-lg mt-3">Descubrir</a>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="section-title">Especial del Día</h2>
+          <h3 class="text-primary mb-3">Capuchino + Croissant</h3>
+          <p class="lead">Disfruta de nuestro delicioso cappuccino artesanal junto a un croissant recién horneado.</p>
+          <div class="special-price">
+            <span class="text-muted text-decoration-line-through">$9200</span>
+            <span class="h3 text-primary ms-2">$7500</span>
+          </div>
+          <button class="btn btn-dark btn-lg mt-3">¡Lo quiero!</button>
+        </div>
+        <div class="col-md-6">
+          <img src="./imagenes/cafe-promo.jpg" class="img-fluid rounded-3 shadow" alt="Especial del día">
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CAFÉS -->
-  <section id="cafes" class="py-5">
+  <!-- Cafes -->
+  <section id="coffee-section" class="coffee-selection py-5">
     <div class="container text-center">
-      <h2 class="mb-4">Nuestros Cafés</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Espresso</h5>
-              <p class="card-text">Fuerte, intenso y perfecto para empezar el día.</p>
+      <h2 class="section-title mb-4">Nuestros Cafés</h2>
+      <div class="coffee-grid row g-4">
+        <div class="coffee-item col-md-4">
+          <div class="coffee-card card h-100 shadow-sm">
+            <img src="./imagenes/cafe-expresso.jpg" class="card-img-top" alt="Espresso">
+            <div class="coffee-details card-body">
+              <h5 class="coffee-name card-title">Espresso</h5>
+              <p class="coffee-description card-text">Fuerte, intenso y perfecto para empezar el día.</p>
+              <div class="coffee-features">
+                <span class="badge bg-light text-dark me-2">Intenso</span>
+                <span class="badge bg-light text-dark">100% Arábica</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Capuccino</h5>
-              <p class="card-text">La mezcla ideal de café, leche y espuma cremosa.</p>
+        <div class="coffee-item col-md-4">
+          <div class="coffee-card card h-100 shadow-sm">
+            <img src="./imagenes/cafe-capuchino.jpg" class="card-img-top" alt="Capuchino">
+            <div class="coffee-details card-body">
+              <h5 class="coffee-name card-title">Cappuccino</h5>
+              <p class="coffee-description card-text">La mezcla ideal de café, leche y espuma cremosa.</p>
+              <div class="coffee-features">
+                <span class="badge bg-light text-dark me-2">Cremoso</span>
+                <span class="badge bg-light text-dark">Espuma Artesanal</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Latte</h5>
-              <p class="card-text">Suave y balanceado, ideal para los amantes de la leche.</p>
+        <div class="coffee-item col-md-4">
+          <div class="coffee-card card h-100 shadow-sm">
+            <img src="./imagenes/cafe-latte.jpg" class="card-img-top" alt="Latte">
+            <div class="coffee-details card-body">
+              <h5 class="coffee-name card-title">Latte</h5>
+              <p class="coffee-description card-text">Suave y balanceado, ideal para los amantes de la leche.</p>
+              <div class="coffee-features">
+                <span class="badge bg-light text-dark me-2">Suave</span>
+                <span class="badge bg-light text-dark">Arte Latte</span>
+              </div>
             </div>
           </div>
         </div>
@@ -71,66 +109,201 @@
     </div>
   </section>
 
-  <!-- MENÚ -->
-  <section id="menu" class="py-5 bg-light">
+<!-- Galeria -->
+  <section class="gallery py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Nuestra Galería</h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <img src="./imagenes/cafe-ambiente.jpg" class="img-fluid rounded gallery-img" alt="Café ambiente">
+        </div>
+        <div class="col-md-4">
+          <img src="./imagenes/cafe-preparacion.png" class="img-fluid rounded gallery-img" alt="Preparación de café">
+        </div>
+        <div class="col-md-4">
+          <img src="./imagenes/cafe-frio.jpg" class="img-fluid rounded gallery-img" alt="Café frio">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clientes -->
+  <section class="testimonials py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Lo que dicen nuestros clientes</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <div class="testimonial-rating text-warning mb-3">
+                ★★★★★
+              </div>
+              <p class="testimonial-text">"El mejor café que he probado en mucho tiempo. El ambiente es perfecto para trabajar o reunirse con amigos."</p>
+              <div class="testimonial-author">
+                <h6 class="mb-0">María González</h6>
+                <small class="text-muted">Cliente frecuente</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <div class="testimonial-rating text-warning mb-3">
+                ★★★★★
+              </div>
+              <p class="testimonial-text">"Los croissants son increíbles, siempre frescos y crujientes. El servicio es excelente."</p>
+              <div class="testimonial-author">
+                <h6 class="mb-0">Carlos Rodríguez</h6>
+                <small class="text-muted">Cliente habitual</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <div class="testimonial-rating text-warning mb-3">
+                ★★★★★
+              </div>
+              <p class="testimonial-text">"Un lugar encantador con un ambiente muy acogedor. El café es de primera calidad."</p>
+              <div class="testimonial-author">
+                <h6 class="mb-0">Ana Martínez</h6>
+                <small class="text-muted">Cliente satisfecha</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu-section" class="menu-section py-5">
     <div class="container text-center">
-      <h2 class="mb-4">Menú</h2>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Café Americano - $3</li>
-        <li class="list-group-item">Capuccino - $4</li>
-        <li class="list-group-item">Latte Vainilla - $4.5</li>
-        <li class="list-group-item">Tarta de chocolate - $5</li>
-        <li class="list-group-item">Croissant - $2.5</li>
+      <h2 class="section-title mb-4">Menú</h2>
+      <ul class="menu-list list-group list-group-flush border rounded p-3">
+        <li class="menu-item list-group-item border-bottom">Café Mocca - $3400</li>
+        <li class="menu-item list-group-item border-bottom">Capuchino - $6700</li>
+        <li class="menu-item list-group-item">Cortado - $2400</li>
+        <li class="menu-item list-group-item">Lungo - $4000</li>
+        <li class="menu-item list-group-item">Latte Vainilla - $3500</li>
+        <li class="menu-item list-group-item">Porción de Torta- $9000</li>
+        <li class="menu-item list-group-item">Medialuna - $2500</li>
+        <li class="menu-item list-group-item">Cafe + Medialuna - $5000</li>
       </ul>
     </div>
   </section>
 
-  <!-- UBICACIÓN -->
-  <section id="ubicacion" class="py-5">
+  <!-- Ubicación -->
+  <section id="location-section" class="location-section">
     <div class="container text-center">
-      <h2 class="mb-4">Ubicación</h2>
-      <p>📍 Av. Siempre Viva 123, Ciudad Minimal</p>
-      <div class="ratio ratio-16x9">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." 
-                style="border:0;" allowfullscreen loading="lazy"></iframe>
+      <h2 class="section-title">Ubicación</h2>
+      <p class="location-address">📍Gral. Urquiza 1169</p>
+      <div class="location-map ratio ratio-16x9">
+        <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23159.221374638502!2d-58.42800428770915!3d-34.62375020238128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccafd9f3c13bb%3A0x49a422e0fb16ea1f!2sGral.%20Urquiza%201169%2C%20C1221%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1757903298972!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0;" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
   </section>
 
-<!-- FORMULARIO DE CONTACTO -->
+<!-- Formulario -->
+  <section id="contact-section" class="contact-section">
+    <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-          <h3 class="mb-3">Contáctanos</h3>
-          <form id="contactForm" class="text-start">
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" required>
+        <div class="col-md-5">
+          <div class="contact-info bg-dark text-light p-4 rounded-start h-100">
+            <h3 class="mb-4">Información de Contacto</h3>
+            <div class="contact-details">
+              <div class="mb-3">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                <span>Gral. Urquiza 1169, CABA</span>
+              </div>
+              <div class="mb-3">
+                <i class="bi bi-telephone-fill me-2"></i>
+                <span>(011) 4555-1234</span>
+              </div>
+              <div class="mb-3">
+                <i class="bi bi-envelope-fill me-2"></i>
+                <span>info@lepetitcafe.com</span>
+              </div>
+              <div class="mb-4">
+                <i class="bi bi-clock-fill me-2"></i>
+                <span>Lun - Sáb: 8:00 - 20:00</span>
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control" id="email" required>
+            <div class="social-links mt-4">
+              <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
             </div>
-            <div class="mb-3">
-              <label for="mensaje" class="form-label">Mensaje</label>
-              <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="form-container bg-white p-4 rounded-end shadow-sm">
+            <h3 class="form-title mb-4">Envíanos un Mensaje</h3>
+            <form id="contact-form" class="contact-form text-start needs-validation" novalidate>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="user-name" placeholder="Tu nombre" required>
+                <label for="user-name">
+                  <i class="bi bi-person-fill me-2"></i>Nombre
+                </label>
+                <div class="invalid-feedback">
+                  Por favor, ingresa tu nombre
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="user-email" placeholder="tu@email.com" required>
+                <label for="user-email">
+                  <i class="bi bi-envelope-fill me-2"></i>Correo electrónico
+                </label>
+                <div class="invalid-feedback">
+                  Por favor, ingresa un correo electrónico válido
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <select class="form-select" id="contact-reason" required>
+                  <option value="" selected disabled>Selecciona una opción</option>
+                  <option value="reserva">Reserva</option>
+                  <option value="consulta">Consulta General</option>
+                  <option value="evento">Eventos Privados</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <label for="contact-reason">
+                  <i class="bi bi-chat-left-text-fill me-2"></i>Motivo de contacto
+                </label>
+                <div class="invalid-feedback">
+                  Por favor, selecciona un motivo
+                </div>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" id="user-message" placeholder="Tu mensaje" style="height: 120px" required></textarea>
+                <label for="user-message">
+                  <i class="bi bi-pencil-fill me-2"></i>Mensaje
+                </label>
+                <div class="invalid-feedback">
+                  Por favor, escribe tu mensaje
+                </div>
+              </div>
+              <button type="submit" class="submit-button btn btn-dark w-100 py-3">
+                <i class="bi bi-send-fill me-2"></i>Enviar Mensaje
+              </button>
+            </form>
+            <!-- Success Message -->
+            <div id="form-success-message" class="success-message alert alert-success mt-3 d-none">
+              <i class="bi bi-check-circle-fill me-2"></i>¡Gracias por tu mensaje! Te responderemos pronto.
             </div>
-            <button type="submit" class="btn btn-dark w-100">Enviar</button>
-          </form>
-          <!-- Mensaje de confirmación -->
-          <div id="formMessage" class="mt-3 text-success d-none">
-            ✅ ¡Gracias por tu mensaje! Te responderemos pronto.
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-dark text-light text-center py-3">
-    <p class="mb-0">© 2025 Café Minimalista | Todos los derechos reservados</p>
+  <!-- Footer -->
+  <footer class="site-footer bg-dark text-light text-center py-3">
+    <p class="copyright-text mb-0">© 2025 Le Petit Café | Todos los derechos reservados</p>
   </footer>
 
-  <!-- Bootstrap JS -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
