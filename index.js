@@ -1,8 +1,8 @@
-// Agregar un efecto suave al scroll del navbar
-document.querySelectorAll('.nav-link').forEach(enlace => {
-  enlace.addEventListener('click', function(e) {
-    e.preventDefault();
-    const seccion = document.querySelector(this.getAttribute('href'));
-    seccion.scrollIntoView({ behavior: 'smooth' });
+// Add smooth scrolling behavior to navigation menu items
+document.querySelectorAll('.menu-link').forEach(menuItem => {
+  menuItem.addEventListener('click', function(event) {
+    event.preventDefault();
+    const targetSection = document.querySelector(this.getAttribute('href'));
+    targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 });
